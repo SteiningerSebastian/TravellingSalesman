@@ -20,25 +20,8 @@ namespace TravellingSalesman.GeneticAlgorithm
         /// <returns>Returns the index of the node in the List<List<int>></returns>
         public int AddNode()
         {
-            //get the index of the next node
-            int nodeId = Graph.GraphData.Count;
-
-            //Build a 2D array with numRows = numCols
-            Graph.GraphData.Add(new List<double>());
-
-            //Add all col to the new node
-            for (int i = 0; i < Graph.GraphData.Count - 1; i++)
-            {
-                Graph.GraphData[nodeId].Add(-1);
-            }
-
-            //Add a new col to the existin nodes
-            foreach (List<double> l in Graph.GraphData)
-            {
-                l.Add(-1);
-            }
-
-            return nodeId;
+            //Add a Node to the Graph
+            throw new NotImplementedException();
         }
 
         /// <summary>
@@ -49,12 +32,12 @@ namespace TravellingSalesman.GeneticAlgorithm
         /// <param name="weight">The weight between these nodes.</param>
         public void AddEdge(int nodeId, int connectedNodeId, double weight)
         {
-            Graph.GraphData[nodeId][connectedNodeId] = weight;
-            Graph.GraphData[connectedNodeId][nodeId] = weight;
+            //Add a weighted edge to the graph
+            throw new NotImplementedException();
         }
 
         /// <summary>
-        /// This function creates a checked array that contains infomration about connections
+        /// This function creates a checked array that contains information about connections
         /// </summary>
         /// <returns>Returns the information as List<int>[]</returns>
         public List<int>[] GetConnectionInformationList()

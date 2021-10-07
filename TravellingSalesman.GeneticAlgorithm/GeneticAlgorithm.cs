@@ -38,43 +38,13 @@ namespace TravellingSalesman.GeneticAlgorithm
         /// </summary>
         public void Execute()
         {
-            List<Chromosome> bestChromosomes = new List<Chromosome>();
-            List<Chromosome> population = null;
-            for (int epoch = 0; epoch < Epochs; epoch++)
-            {
+            throw new NotImplementedException();
 
+            //Use the bellow code for each epoch to update the frontend
+            //Thread t = new Thread(new ThreadStart(()=>UIUpdate(bestChromosomes[0])));
+            //t.SetApartmentState(ApartmentState.STA);
+            //t.Start();
 
-                if (epoch == 0)
-                {
-                    population = populationBuilder_.Build();
-                }
-                else
-                {
-
-                    if (bestChromosomes.Count > 0)
-                    {
-                        for (int i = 0; i < bestChromosomes.Count; i++)
-                        {
-                            population.Add((Chromosome)bestChromosomes[i].Clone());
-                        }
-                    }
-
-                    population = populationBuilder_.Build(population);
-                }
-
-                population = population.OrderBy(chromosome => chromosome.Evaluate()).ToList();
-
-                bestChromosomes.Clear();
-
-                for(int i = 0; i<UseBestParents; i++)
-                {
-                    bestChromosomes.Add((Chromosome)population[i].Clone());
-                }
-
-                Thread t = new Thread(new ThreadStart(()=>UIUpdate(bestChromosomes[0])));
-                t.SetApartmentState(ApartmentState.STA);
-                t.Start();
-            }
         }
     }
 }

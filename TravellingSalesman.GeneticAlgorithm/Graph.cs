@@ -11,7 +11,7 @@ namespace TravellingSalesman.GeneticAlgorithm
         public List<List<double>> GraphData { get; set; }
         public Graph()
         {
-            GraphData = new List<List<double>>();
+            //init the GraphData
         }
     }
 }

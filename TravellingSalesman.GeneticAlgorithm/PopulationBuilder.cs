@@ -48,49 +48,36 @@ namespace TravellingSalesman.GeneticAlgorithm
                 //Initialize Random offspring
                 if (i < PopulationSize * Percentage_Random)
                 {
-                    Chromosome chromosome = new Chromosome();
-                    chromosome.InitializeRandom();
-                    lock (population)
-                    {
-                        population.Add(chromosome);
-                    }
+                    //Get a random chromosome
+                    throw new NotImplementedException();
+
+                    //uncomment this code bellow
+                    //lock (population)
+                    //{
+                    //    population.Add(chromosome);
+                    //}
                 }
                 //Mutation of the best parents
                 else if (i < PopulationSize * Percentage_Random + PopulationSize * Percentage_Mutation)
                 {
-                    int rand = 0;
-                    lock (GlobalRandom.random)
-                    {
-                        rand = GlobalRandom.random.Next(0, MutationOfTheFittest);
-                    }
-
-                    Chromosome chromosome = sortedParents[rand].Mutate();
-
-                    lock (population)
-                    {
-                        population.Add(chromosome);
-                    }
+                    //Get a mutated chromosome using the parents
+                    throw new NotImplementedException();
+                    //uncomment the code bellow
+                    //lock (population)
+                    //{
+                    //    population.Add(chromosome);
+                    //}
                 }
                 //Crossover parents to get the offspring
                 else
                 {
-                    int rand1, rand2;
-                    while (true)
-                    {
-                        lock (GlobalRandom.random)
-                        {
-                            rand1 = GlobalRandom.random.Next(0, CorssOverOftheFittest);
-                            rand2 = GlobalRandom.random.Next(0, CorssOverOftheFittest);
-                        }
-                        if (rand1 != rand2)
-                        {
-                            break;
-                        }
-                    }
-                    lock (population)
-                    {
-                        population.Add(Chromosome.CrossOver(sortedParents[rand1], sortedParents[rand2]));
-                    }
+                    //create a new chromosome using crossover
+                    throw new NotImplementedException();
+                    //uncomment the code bellow
+                    //lock (population)
+                    //{
+                    //    population.Add(chromosome);
+                    //}
                 }
             });
 
@@ -106,12 +93,13 @@ namespace TravellingSalesman.GeneticAlgorithm
             List<Chromosome> population = new List<Chromosome>();
             Parallel.For(0, PopulationSize, (i, state) =>
             {
-                Chromosome chromosome = new Chromosome();
-                chromosome.InitializeRandom();
-                lock (population)
-                {
-                    population.Add(chromosome);
-                }
+                //init a random chromosome
+                throw new NotImplementedException();
+                //uncomment the code bellow
+                //lock (population)
+                //{
+                //    population.Add(chromosome);
+                //}
             });
             return population;
         }

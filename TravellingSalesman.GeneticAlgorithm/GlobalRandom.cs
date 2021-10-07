@@ -8,6 +8,6 @@ namespace TravellingSalesman.GeneticAlgorithm
 {
     public class GlobalRandom
     {
-        public static Random random = new Random();
+        //Create one static random object
     }
 }
