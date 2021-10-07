@@ -87,9 +87,10 @@ namespace TravellingSalesman.GeneticAlgorithm
                             break;
                         }
                     }
+                    Chromosome chromosome = Chromosome.CrossOver(sortedParents[rand1], sortedParents[rand2]);
                     lock (population)
                     {
-                        population.Add(Chromosome.CrossOver(sortedParents[rand1], sortedParents[rand2]));
+                        population.Add(chromosome);
                     }
                 }
             });
