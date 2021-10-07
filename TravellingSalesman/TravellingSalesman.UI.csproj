@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <Configurations>Debug;Release;ReleaseTest</Configurations>
+    <Platforms>AnyCPU;x64</Platforms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TravellingSalesman.GeneticAlgorithm\TravellingSalesman.GeneticAlgorithm.csproj" />
+  </ItemGroup>
+
+</Project>

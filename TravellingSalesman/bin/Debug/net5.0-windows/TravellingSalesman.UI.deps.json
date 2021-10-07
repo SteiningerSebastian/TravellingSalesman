@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "TravellingSalesman.UI/1.0.0": {
+        "dependencies": {
+          "TravellingSalesman.GeneticAlgorithm": "1.0.0"
+        },
+        "runtime": {
+          "TravellingSalesman.UI.dll": {}
+        }
+      },
+      "TravellingSalesman.GeneticAlgorithm/1.0.0": {
+        "runtime": {
+          "TravellingSalesman.GeneticAlgorithm.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "TravellingSalesman.UI/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "TravellingSalesman.GeneticAlgorithm/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
