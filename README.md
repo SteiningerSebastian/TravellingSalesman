@@ -1,2 +1,2 @@
 # TravellingSalesman
-<video src='https://youtu.be/EJQ8PQNelG8' width=180/>
+[![Watch the video](https://img.youtube.com/vi/wG-1tCsXteI/maxresdefault.jpg)](https://youtu.be/wG-1tCsXteI)
